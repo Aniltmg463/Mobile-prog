@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Button to show the dialog -->
+    <Button
+        android:id="@+id/btnClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Dialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp" />
+
+    <!-- Dialog content below the main content, hidden initially -->
+    <RelativeLayout
+        android:id="@+id/dialogContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnClick"
+        android:layout_marginTop="20dp"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edtFirst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Number"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edtSecond"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Second Number"
+            android:inputType="number"
+            android:layout_below="@id/edtFirst"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:layout_below="@id/edtSecond"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result:"
+            android:textSize="20sp"
+            android:layout_below="@id/btnCalculate"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+    </RelativeLayout>
+</RelativeLayout>
